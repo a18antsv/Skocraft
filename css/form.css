@@ -1,0 +1,171 @@
+#register-form {
+    width: 400px;
+}
+
+.form-element {
+    position: relative;
+    margin: 2rem 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.form-element-field {
+    width: 100%;
+    height: 1.5rem;
+    border: 0 solid transparent;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    font-size: 1rem;
+    padding: 2px;
+}
+
+.form-element-line {
+    height: 2px;
+    background: #999999;
+}
+
+.form-element-line::after {
+    content: "";
+    position: absolute;
+    background: #337ab7;
+    height: 2px;
+    width: 0px;
+    left: 50%;
+    transition: left 0.2s ease, width 0.2s ease;
+    
+}
+
+.form-element-label {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    transition: all 0.1s ease;
+    color: #999999;
+}
+
+.form-element-checkbox {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+}
+
+.form-element-checkbox-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 1.75rem;
+    text-align: left;
+    color: #333;
+    display: block;
+}
+
+#consent-text {
+    font-size: 0.85rem;
+}
+
+.checkbox {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.25rem;
+    border: 2px solid #999999;
+    transition: border-color 0.2s ease;
+}
+
+.checkbox::before, 
+.checkbox::after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0.2rem;
+    background-color: #337ab7;
+    transform-origin: left top;
+    border-radius: 0.25rem;
+    transition: opacity 0.2s ease, height 0s linear 0.2s;
+    opacity: 0;
+}
+
+.checkbox::before {
+    top: 0.65rem;
+    left: 0.38rem;
+    transform: rotate(-135deg);
+    box-shadow: 0 0 0 0.0625rem rgb(214, 214, 214);
+}
+
+.checkbox::after {
+    top: 0.3rem;
+    transform: rotate(-45deg);
+}
+
+.form-element-checkbox:checked ~ .checkbox {
+    border: 2px solid #337ab7;
+}
+
+.form-element-checkbox:checked ~ .checkbox::after,
+.form-element-checkbox:checked ~ .checkbox::before {
+    opacity: 1;
+    transition: height 0.2s ease;
+}
+
+.form-element-checkbox:checked ~ .checkbox::after {
+    height: 0.5rem;
+}
+
+.form-element-checkbox:checked ~ .checkbox::before {
+    height: 1.2rem;
+    transition-delay: 0.2s;
+}
+
+.form-element-button {
+    background-color: #03a9f4;
+    text-transform: uppercase;
+    color: #ffffff;
+    cursor: pointer;
+    padding: .75rem 2.25rem;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    transition: all .2s ease-out;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.225);
+}
+
+.form-element-button:hover {
+    box-shadow: 0 4px 10px 0px rgba(0,0,0,0.225);
+    background-color: #13b4ff;
+}
+
+.form-element .form-element-field:focus ~ .form-element-label,
+.form-element .form-element-field:valid ~ .form-element-label {
+    top: -1rem;
+    font-size: 0.75rem;
+    color: #337ab7;
+}
+
+.form-element .form-element-field:focus ~ .form-element-line::after {
+    width: 100%;
+    left: 0;
+}
+
+.form-element-message {
+    font-size: .75rem;
+    font-weight: bold;
+    height: 1rem;
+}
+
+.error {
+    color: #cc0033;
+}
+
+.success {
+    color: #4BB543;
+}
+
+.bold {
+    font-weight: bold;
+}

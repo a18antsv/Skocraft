@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="page-container">
+        <div class="fullscreen-container left" data-page="info">
+            <i class="material-icons icon right" data-to-page="start">arrow_forward</i>
+            <div class="information-container">
+                <h2 class="center">Information and rules</h2>
+                <h3>Index</h3>
+                <ol>
+                    <li><a href="#joining-the-server">Joining the server</a></li>
+                    <li><a href="#server-and-plugins">Server & plugins</a></li>
+                    <li><a href="#nicknames">Nicknames</a></li>
+                    <li><a href="#link-with-discord">Link with discord</a></li>
+                    <li><a href="#pvp">PvP</a></li>
+                    <li><a href="#breaking-and-entering">Breaking & entering</a></li>
+                    <li><a href="#chat">Chat</a></li>
+                    <li><a href="#trees-and-landscape">Trees & landscape</a></li>
+                    <li><a href="#cheats">Cheats</a></li>
+                    <li><a href="#varnings-and-bans">Varnings & bans</a></li>
+                </ol>
+                <section id="joining-the-server" class="information-section">
+                    <h3>1. Joining the server</h3>
+                    <p>To be able to join the server you need to register.</p>
+                    <p>You do this by pressing register on the start page on this website and follow the instructions, keep in mind that you need to register with your student username at Högskolan i Skövde.</p>
+                    <p>After you have registered you can join the server. Just add a server and enter the address of “skocraft.se”.</p>
+                </section>
+                <section id="server-and-plugins" class="information-section">
+                    <h3>2. Server & plugins</h3>
+                    <p>The server runs on PaperMC, in game, press "f3" for more detailed information.</p>
+                    <p>Plugins include SilkSpawners, PlayerHeads, Harbor & DiscordSRV.</p>
+                    <p>Harbor<br>It's enough that the majority of the players online sleeps to turn night into day.</p>
+                    <p>Playerheads<br>When a player is killed, there is a 5% chance they drop their head for you to pick up, the same goes for mobs.</p>
+                    <p>SilkSpawners<br>If you use a pickaxe with the silktouch enchantment on spawners you can pick them up.</p>
+                </section>
+                <section id="nicknames" class="information-section">
+                    <h3>3. Nicknames</h3>
+                    <p>Feel free to set your own nickname, just stay appropriate.</p>
+                    <p>Just open the chat,in game, and write /nickname followed by the desired nickname.</p>
+                    <p>For example: "/nickname Roger"</p>
+                </section>
+                <section id="link-with-discord" class="information-section">
+                    <h3>4. Link with discord</h3>
+                    <p>To link up your Discord and your Mincraft chat write "/dicord link" in the game chat. Remember the numbers provided and send them to Villager Chet on the discord server.</p>
+                </section>
+                <section id="pvp" class="information-section">
+                    <h3>5. PvP</h3>
+                    <p>PvP is allowed outside of the spawn area but we will not tolerate this being misused, that means NO BULLYING.</p>
+                </section>
+                <section id="breaking-and-entering" class="information-section">
+                    <h3>6. Breaking & entering</h3>
+                    <p>If you and your friends want to play pranks on each other, no problems. You may also visit other players bases, but don't steal resources from other players bases and don't break other players builds.</p>
+                </section>
+                <section id="chat" class="information-section">
+                    <h3>7. Chat</h3>
+                    <p>Don't be an ass in the chat, any form of inappropriate behavior will not be tolerated. This applies on the Discord server as well as on the Minecraft server.</p>
+                </section>
+                <section id="trees-and-landscape" class="information-section">
+                    <h3>8. Trees & landscape</h3>
+                    <p>When you cut down trees, cut down the whole tree. Don't destroy landscapes, dig and build to your hearts contempt, but make sure everything looks nice once you're done. Replant trees you cut down.</p>
+                </section>
+                <section id="cheats" class="information-section">
+                    <h3>9. Cheats</h3>
+                    <p>You are not allowed to use external programs for mining/finding materials or similar. If you're unsure if a tool or program is allowed or not, it's NOT!</p>
+                </section>
+                <section id="varnings-and-bans" class="information-section">
+                    <h3>10. Varnings & bans</h3>
+                    <p>Any offense can result in a warning, temporary ban or permanant ban. Admins and moderators are judge and jury here.</p>
+                    <p>Any questions, requests or complaints can be directed to the admins on the Discord server.</p>
+                    <p>To summarize don't be an ass, be creative and have fun.</p>
+                </section>
+            </div>
+        </div>
+        <div class="fullscreen-container current" data-page="start">
+            <div class="menu">
+                <div class="logo-container">
+                    <img src="img/skocraft.png" alt="Sköcraft">
+                </div>
+                <div class="minecraft-button" data-to-page="register">
+                    <div class="button-text">
+                        Register
+                    </div>
+                </div>
+                <div class="minecraft-button" data-to-page="info">
+                    <div class="button-text">
+                        Information and rules
+                    </div>
+                </div>
+                <div class="minecraft-button">
+                    <a href="https://discord.com/invite/Uxh44aG" target="_blank" rel="noopener noreferrer">
+                        <div class="button-text">
+                            Discord
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="fullscreen-container right" data-page="register">
+            <i class="material-icons icon left" data-to-page="start">arrow_back</i>
+            <form id="register-form" class="information-container">
+                <h2 class="center">Registration form</h2>
+                <div class="form-element">
+                    <input type="text" id="email-field" name="email" class="form-element-field" required/>
+                    <div class="form-element-line"></div>
+                    <label for="email-field" class="form-element-label">Student username (@student.his.se)</label>
+                    <div id="email-message" class="form-element-message"></div>
+                </div>
+                <div class="form-element">
+                    <input type="text" id="mojang-field" name="mojang" class="form-element-field" required/>
+                    <div class="form-element-line"></div>
+                    <label for="mojang-field" class="form-element-label">Mojang username</label>
+                    <div id="mojang-message" class="form-element-message"></div>
+                </div>
+                <div class="form-element">
+                    <label for="consent-checkbox" class="form-element-checkbox-label">
+                        <input type="checkbox" id="consent-checkbox" class="form-element-checkbox" name="consent" required>
+                        <div class="checkbox"></div>
+                        <span id="consent-text">I consent to the storage of my data.</span>
+                    </label>
+                </div>
+                <div class="form-element center">
+                    <input type="submit" class="form-element-button" value="Register">
+                </div>
+                <div id="form-message" class="form-element-message"></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
